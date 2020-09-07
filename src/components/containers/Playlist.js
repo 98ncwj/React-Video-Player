@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PlaylistHeader from "../PlaylistHeader";
 import PlaylistItems from "../containers/PlaylistItems";
 import NightMode from "../Nightmode";
@@ -9,7 +9,7 @@ const Playlist = ({ videos, active, nightModeCallback, nightMode }) => {
     <StyledPlaylist>
       <NightMode nightModeCallback={nightModeCallback} nightMode={nightMode} />
       <PlaylistHeader active={active} total={videos.length} />
-      <PlaylistItems video={videos} active={active} />
+      <PlaylistItems videos={videos} active={active} />
     </StyledPlaylist>
   );
 };
